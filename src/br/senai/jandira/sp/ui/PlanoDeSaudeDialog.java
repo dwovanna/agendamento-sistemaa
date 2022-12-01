@@ -47,7 +47,7 @@ public class PlanoDeSaudeDialog extends javax.swing.JDialog {
         jTextFieldCodigo.setText(plano.getCodigo().toString());
         jTextFieldOperadora.setText(plano.getOperadora());
         jTextFieldCategoria.setText(plano.getCategoria());
-        jTextFieldNumero.setText(plano.getNumero());
+        jTextField1.setText(plano.getNumero());
         validadeField.setText(plano.getValidade().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")));
 
     }
@@ -76,24 +76,24 @@ public class PlanoDeSaudeDialog extends javax.swing.JDialog {
         jLabelValidade = new javax.swing.JLabel();
         jLabelcategoria = new javax.swing.JLabel();
         jLabelnumero = new javax.swing.JLabel();
-        jTextFieldNumero = new javax.swing.JTextField();
         jTextFieldCategoria = new javax.swing.JTextField();
         jTextFieldOperadora = new javax.swing.JTextField();
         jTextFieldCodigo = new javax.swing.JTextField();
         jButtonSalvar = new javax.swing.JButton();
         jButtonCancel = new javax.swing.JButton();
         validadeField = new javax.swing.JFormattedTextField();
+        jTextField1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jLabelCodigo.setText("Código");
+        jLabelCodigo.setText("Código:");
 
-        jPaneladd.setBackground(new java.awt.Color(153, 0, 51));
+        jPaneladd.setBackground(new java.awt.Color(204, 204, 255));
+        jPaneladd.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jLabel2Add.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel2Add.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2Add.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel2Add.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/jandira/sp/imagens/plus (1).png"))); // NOI18N
-        jLabel2Add.setText("Adicionar - PLANO DE SAUDE");
+        jLabel2Add.setText("Adicionar - Plano de Saúde");
 
         javax.swing.GroupLayout jPaneladdLayout = new javax.swing.GroupLayout(jPaneladd);
         jPaneladd.setLayout(jPaneladdLayout);
@@ -102,7 +102,7 @@ public class PlanoDeSaudeDialog extends javax.swing.JDialog {
             .addGroup(jPaneladdLayout.createSequentialGroup()
                 .addGap(160, 160, 160)
                 .addComponent(jLabel2Add)
-                .addContainerGap(157, Short.MAX_VALUE))
+                .addContainerGap(204, Short.MAX_VALUE))
         );
         jPaneladdLayout.setVerticalGroup(
             jPaneladdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -112,41 +112,55 @@ public class PlanoDeSaudeDialog extends javax.swing.JDialog {
                 .addGap(23, 23, 23))
         );
 
-        jLabeloperadora.setText("Operadora");
+        jLabeloperadora.setText("Operadora:");
 
-        jLabelValidade.setText("Validade");
+        jLabelValidade.setText("Validade:");
 
-        jLabelcategoria.setText("Categoria");
+        jLabelcategoria.setText("Categoria:");
 
-        jLabelnumero.setText("Número");
+        jLabelnumero.setText("Número:");
 
+        jTextFieldCategoria.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jTextFieldCategoria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldCategoriaActionPerformed(evt);
             }
         });
 
+        jTextFieldOperadora.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jTextFieldOperadora.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldOperadoraActionPerformed(evt);
+            }
+        });
+
         jTextFieldCodigo.setEditable(false);
+        jTextFieldCodigo.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jTextFieldCodigo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldCodigoActionPerformed(evt);
             }
         });
 
+        jButtonSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/jandira/sp/imagens/save.png"))); // NOI18N
         jButtonSalvar.setText("Salvar");
+        jButtonSalvar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButtonSalvar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonSalvarActionPerformed(evt);
             }
         });
 
-        jButtonCancel.setText("Cancel");
+        jButtonCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/jandira/sp/imagens/error.png"))); // NOI18N
+        jButtonCancel.setText("Cancelar");
+        jButtonCancel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButtonCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCancelActionPerformed(evt);
             }
         });
 
+        validadeField.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         validadeField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 validadeFieldActionPerformed(evt);
@@ -158,62 +172,77 @@ public class PlanoDeSaudeDialog extends javax.swing.JDialog {
             ex.printStackTrace();
         }
 
+        jTextField1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPaneladd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabeloperadora)
+                                    .addComponent(jTextFieldOperadora, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(65, 65, 65)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(validadeField, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabelValidade)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jTextFieldCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabelcategoria))
+                                .addGap(65, 65, 65)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabelCodigo)
+                                    .addComponent(jTextFieldCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabelnumero)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButtonSalvar)
+                .addComponent(jButtonSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButtonCancel)
-                .addGap(111, 111, 111))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelValidade)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jLabelCodigo)
-                        .addComponent(jLabeloperadora)
-                        .addComponent(jLabelcategoria)
-                        .addComponent(jLabelnumero)
-                        .addComponent(jTextFieldCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextFieldOperadora)
-                        .addComponent(jTextFieldCategoria, javax.swing.GroupLayout.DEFAULT_SIZE, 211, Short.MAX_VALUE)
-                        .addComponent(jTextFieldNumero, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(validadeField, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jButtonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(32, 32, 32))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPaneladd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(51, 51, 51)
-                .addComponent(jLabelCodigo)
-                .addGap(11, 11, 11)
-                .addComponent(jTextFieldCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabeloperadora)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextFieldOperadora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabelcategoria)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextFieldCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
-                .addComponent(jLabelnumero)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextFieldNumero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabelValidade)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(validadeField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonSalvar)
-                    .addComponent(jButtonCancel))
-                .addGap(34, 34, 34))
+                    .addComponent(jLabeloperadora)
+                    .addComponent(jLabelValidade))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextFieldOperadora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(validadeField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(52, 52, 52)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelcategoria)
+                    .addComponent(jLabelCodigo))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextFieldCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(42, 42, 42)
+                .addComponent(jLabelnumero)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26))
         );
 
         pack();
@@ -241,9 +270,9 @@ public class PlanoDeSaudeDialog extends javax.swing.JDialog {
         } else if (jTextFieldCategoria.getText().isEmpty() == true) {
             JOptionPane.showMessageDialog(null, "A categoria do plano é obrigatória!", "Erro", JOptionPane.WARNING_MESSAGE);
             jTextFieldCategoria.requestFocus();
-        } else if (jTextFieldNumero.getText().isEmpty() == true) {
+        } else if (jTextField1.getText().isEmpty() == true) {
             JOptionPane.showMessageDialog(null, "O número do plano é obrigatório!", "Erro", JOptionPane.WARNING_MESSAGE);
-            jTextFieldNumero.requestFocus();
+            jTextField1.requestFocus();
         } else if (validadeField.getText().contains(s) == true) {
             JOptionPane.showMessageDialog(null, "A validade do plano é obrigatória!", "Erro", JOptionPane.WARNING_MESSAGE);
             validadeField.requestFocus();
@@ -257,10 +286,13 @@ public class PlanoDeSaudeDialog extends javax.swing.JDialog {
     private void validadeFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_validadeFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_validadeFieldActionPerformed
+
+    private void jTextFieldOperadoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldOperadoraActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldOperadoraActionPerformed
     private void editar() {
         plano.setOperadora(jTextFieldOperadora.getText());
         plano.setCategoria(jTextFieldCategoria.getText());
-        plano.setNumero(jTextFieldNumero.getText());
         plano.setValidade(LocalDate.parse(validadeField.getText(),DateTimeFormatter.ofPattern("dd/MM/yyyy")));
 
         PlanoDeSaudeDAO.atualizar(plano);
@@ -274,7 +306,7 @@ public class PlanoDeSaudeDialog extends javax.swing.JDialog {
             PlanoDeSaude novoPlano = new PlanoDeSaude();
             novoPlano.setOperadora(jTextFieldOperadora.getText());
             novoPlano.setCategoria(jTextFieldCategoria.getText());
-            novoPlano.setNumero(jTextFieldNumero.getText());
+            novoPlano.setNumero(jTextField1.getText());
             novoPlano.setValidade(LocalDate.parse(validadeField.getText(), DateTimeFormatter.ofPattern("dd/MM/yyyy")));
 
             PlanoDeSaudeDAO.gravar(novoPlano);
@@ -292,9 +324,9 @@ public class PlanoDeSaudeDialog extends javax.swing.JDialog {
     private javax.swing.JLabel jLabelnumero;
     private javax.swing.JLabel jLabeloperadora;
     private javax.swing.JPanel jPaneladd;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextFieldCategoria;
     private javax.swing.JTextField jTextFieldCodigo;
-    private javax.swing.JTextField jTextFieldNumero;
     private javax.swing.JTextField jTextFieldOperadora;
     private javax.swing.JFormattedTextField validadeField;
     // End of variables declaration//GEN-END:variables

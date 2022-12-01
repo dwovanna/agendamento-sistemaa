@@ -31,7 +31,6 @@ public class HomeFrame extends javax.swing.JFrame {
         buttonHome = new javax.swing.JButton();
         buttonPaciente = new javax.swing.JButton();
         buttonPlanodeSaude = new javax.swing.JButton();
-        buttonSair = new javax.swing.JButton();
         buttonAgenda = new javax.swing.JButton();
         buttonEspecialidade = new javax.swing.JButton();
         panelHome = new javax.swing.JPanel();
@@ -41,7 +40,9 @@ public class HomeFrame extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         buttonMedico = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sistema de Agendamento");
@@ -49,14 +50,13 @@ public class HomeFrame extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(null);
 
-        jPanel1.setBackground(new java.awt.Color(153, 0, 51));
-        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         labelIcone.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/jandira/sp/imagens/notepad.png"))); // NOI18N
 
         labelSistema.setFont(new java.awt.Font("Segoe UI Emoji", 0, 24)); // NOI18N
-        labelSistema.setForeground(new java.awt.Color(255, 255, 255));
-        labelSistema.setText("Sistema para Agendamento de Consultas");
+        labelSistema.setText("SISTEMA PARA AGENDAMENTO DE CONSULTAS");
         labelSistema.setToolTipText("");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -68,7 +68,7 @@ public class HomeFrame extends javax.swing.JFrame {
                 .addComponent(labelIcone, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(labelSistema, javax.swing.GroupLayout.PREFERRED_SIZE, 528, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(145, Short.MAX_VALUE))
+                .addContainerGap(147, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -77,7 +77,7 @@ public class HomeFrame extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(labelSistema, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelIcone))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(8, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel1);
@@ -86,82 +86,78 @@ public class HomeFrame extends javax.swing.JFrame {
         buttonHome.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         buttonHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/jandira/sp/imagens/home (1).png"))); // NOI18N
         buttonHome.setText("Home");
+        buttonHome.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         buttonHome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonHomeActionPerformed(evt);
             }
         });
         getContentPane().add(buttonHome);
-        buttonHome.setBounds(10, 90, 90, 50);
+        buttonHome.setBounds(10, 100, 90, 40);
 
         buttonPaciente.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         buttonPaciente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/jandira/sp/imagens/group.png"))); // NOI18N
         buttonPaciente.setText("Paciente");
+        buttonPaciente.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         buttonPaciente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonPacienteActionPerformed(evt);
             }
         });
         getContentPane().add(buttonPaciente);
-        buttonPaciente.setBounds(190, 90, 100, 50);
+        buttonPaciente.setBounds(210, 100, 90, 40);
 
         buttonPlanodeSaude.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         buttonPlanodeSaude.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/jandira/sp/imagens/desk.png"))); // NOI18N
         buttonPlanodeSaude.setText(" Plano de Saude");
+        buttonPlanodeSaude.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         buttonPlanodeSaude.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonPlanodeSaudeActionPerformed(evt);
             }
         });
         getContentPane().add(buttonPlanodeSaude);
-        buttonPlanodeSaude.setBounds(390, 90, 140, 50);
-
-        buttonSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/jandira/sp/imagens/minus.png"))); // NOI18N
-        buttonSair.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonSairActionPerformed(evt);
-            }
-        });
-        getContentPane().add(buttonSair);
-        buttonSair.setBounds(670, 90, 80, 50);
+        buttonPlanodeSaude.setBounds(410, 100, 130, 40);
 
         buttonAgenda.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         buttonAgenda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/jandira/sp/imagens/notebook.png"))); // NOI18N
         buttonAgenda.setText("Agenda");
+        buttonAgenda.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         buttonAgenda.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonAgendaActionPerformed(evt);
             }
         });
         getContentPane().add(buttonAgenda);
-        buttonAgenda.setBounds(290, 90, 100, 50);
+        buttonAgenda.setBounds(310, 100, 90, 40);
 
         buttonEspecialidade.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         buttonEspecialidade.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/jandira/sp/imagens/pin.png"))); // NOI18N
         buttonEspecialidade.setText("Especialidade");
+        buttonEspecialidade.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         buttonEspecialidade.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonEspecialidadeActionPerformed(evt);
             }
         });
         getContentPane().add(buttonEspecialidade);
-        buttonEspecialidade.setBounds(530, 90, 130, 50);
+        buttonEspecialidade.setBounds(550, 100, 120, 40);
 
-        panelHome.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14), new java.awt.Color(153, 0, 51))); // NOI18N
+        panelHome.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14), new java.awt.Color(204, 102, 255))); // NOI18N
         panelHome.setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(153, 0, 51));
+        jLabel1.setForeground(new java.awt.Color(204, 102, 255));
         jLabel1.setText("SISACON");
         panelHome.add(jLabel1);
-        jLabel1.setBounds(30, 80, 160, 50);
+        jLabel1.setBounds(20, 70, 160, 50);
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel2.setText("Sistema para Agendamento de Consultas");
         panelHome.add(jLabel2);
-        jLabel2.setBounds(30, 120, 280, 20);
+        jLabel2.setBounds(20, 120, 280, 20);
 
-        jPanel2.setBackground(new java.awt.Color(153, 0, 51));
+        jPanel2.setBackground(new java.awt.Color(204, 102, 255));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -178,19 +174,23 @@ public class HomeFrame extends javax.swing.JFrame {
         jPanel2.setBounds(0, 143, 750, 3);
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel3.setText("Dados para contato:");
+        jLabel3.setText("Suporte Técnico");
         panelHome.add(jLabel3);
-        jLabel3.setBounds(20, 160, 140, 20);
+        jLabel3.setBounds(620, 160, 110, 20);
 
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel4.setText("E-mail: suportein@sisacon.com");
         panelHome.add(jLabel4);
-        jLabel4.setBounds(0, 180, 190, 20);
+        jLabel4.setBounds(550, 190, 190, 20);
 
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel5.setText("Telefone: (11) 2450-6300");
         panelHome.add(jLabel5);
-        jLabel5.setBounds(10, 200, 140, 20);
+        jLabel5.setBounds(590, 210, 140, 20);
+
+        jLabel6.setText("www.sicacon.com.br");
+        panelHome.add(jLabel6);
+        jLabel6.setBounds(610, 230, 130, 16);
 
         getContentPane().add(panelHome);
         panelHome.setBounds(10, 160, 750, 350);
@@ -198,15 +198,21 @@ public class HomeFrame extends javax.swing.JFrame {
         buttonMedico.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         buttonMedico.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/jandira/sp/imagens/user.png"))); // NOI18N
         buttonMedico.setText("Médico");
+        buttonMedico.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         buttonMedico.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonMedicoActionPerformed(evt);
             }
         });
         getContentPane().add(buttonMedico);
-        buttonMedico.setBounds(100, 90, 90, 50);
+        buttonMedico.setBounds(110, 100, 90, 40);
 
-        setSize(new java.awt.Dimension(787, 537));
+        jButton1.setText("Sair");
+        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(jButton1);
+        jButton1.setBounds(690, 90, 23, 20);
+
+        setSize(new java.awt.Dimension(787, 530));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -226,10 +232,6 @@ public class HomeFrame extends javax.swing.JFrame {
         panelEspecialidades.setVisible(false);
          panelMedico.setVisible(false);
     }//GEN-LAST:event_buttonPlanodeSaudeActionPerformed
-
-    private void buttonSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSairActionPerformed
-dispose(); 
-    }//GEN-LAST:event_buttonSairActionPerformed
 
     private void buttonAgendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAgendaActionPerformed
 
@@ -258,12 +260,13 @@ panelEspecialidades.setVisible(false);
     private javax.swing.JButton buttonMedico;
     private javax.swing.JButton buttonPaciente;
     private javax.swing.JButton buttonPlanodeSaude;
-    private javax.swing.JButton buttonSair;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel labelIcone;

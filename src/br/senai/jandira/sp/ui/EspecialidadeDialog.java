@@ -73,12 +73,11 @@ public class EspecialidadeDialog extends javax.swing.JDialog {
         setBackground(new java.awt.Color(255, 255, 255));
         getContentPane().setLayout(null);
 
-        panelEspecialidade.setBackground(new java.awt.Color(153, 0, 51));
+        panelEspecialidade.setBackground(new java.awt.Color(204, 204, 255));
 
         jLabelEspcialidadeAdd.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabelEspcialidadeAdd.setForeground(new java.awt.Color(255, 255, 255));
         jLabelEspcialidadeAdd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/jandira/sp/imagens/plus (1).png"))); // NOI18N
-        jLabelEspcialidadeAdd.setText("Especialidades - ADICIONAR");
+        jLabelEspcialidadeAdd.setText("ESPECIALIDADE - ADICIONAR");
 
         javax.swing.GroupLayout panelEspecialidadeLayout = new javax.swing.GroupLayout(panelEspecialidade);
         panelEspecialidade.setLayout(panelEspecialidadeLayout);
@@ -87,7 +86,7 @@ public class EspecialidadeDialog extends javax.swing.JDialog {
             .addGroup(panelEspecialidadeLayout.createSequentialGroup()
                 .addGap(160, 160, 160)
                 .addComponent(jLabelEspcialidadeAdd)
-                .addContainerGap(173, Short.MAX_VALUE))
+                .addContainerGap(162, Short.MAX_VALUE))
         );
         panelEspecialidadeLayout.setVerticalGroup(
             panelEspecialidadeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -100,27 +99,30 @@ public class EspecialidadeDialog extends javax.swing.JDialog {
         getContentPane().add(panelEspecialidade);
         panelEspecialidade.setBounds(0, 0, 670, 87);
 
-        jPanelDdos.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Dados da Especialidade", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14), new java.awt.Color(153, 0, 0))); // NOI18N
+        jPanelDdos.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Dados da Especialidade", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14))); // NOI18N
 
-        jLabelCodigo.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabelCodigo.setText("Código");
+        jLabelCodigo.setText("Código:");
 
         jTextFieldCodigo.setEditable(false);
+        jTextFieldCodigo.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jTextFieldCodigo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldCodigoActionPerformed(evt);
             }
         });
 
-        jLabelNomedaEspecialidade.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabelNomedaEspecialidade.setText("Nome da Especialidade");
+        jLabelNomedaEspecialidade.setText("Nome da Especialidade:");
 
-        jLabelDescricao.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabelDescricao.setText("Descrição da Especialidade");
+        jTextFieldNomedaEspecialidade.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        jLabelDescricao.setText("Descrição da Especialidade:");
+
+        jTextFieldDescricao.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jButtonCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/jandira/sp/imagens/error.png"))); // NOI18N
-        jButtonCancel.setText("Cancel");
+        jButtonCancel.setText("Cancelar");
         jButtonCancel.setToolTipText("Cancelar");
+        jButtonCancel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButtonCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCancelActionPerformed(evt);
@@ -128,8 +130,9 @@ public class EspecialidadeDialog extends javax.swing.JDialog {
         });
 
         jButtonSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/senai/jandira/sp/imagens/save.png"))); // NOI18N
-        jButtonSave.setText("Save");
+        jButtonSave.setText("Salvar");
         jButtonSave.setToolTipText("Salvar");
+        jButtonSave.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButtonSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonSaveActionPerformed(evt);
@@ -142,10 +145,10 @@ public class EspecialidadeDialog extends javax.swing.JDialog {
             jPanelDdosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelDdosLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButtonCancel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButtonSave)
-                .addGap(36, 36, 36))
+                .addComponent(jButtonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButtonSave, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(43, 43, 43))
             .addGroup(jPanelDdosLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanelDdosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -172,17 +175,17 @@ public class EspecialidadeDialog extends javax.swing.JDialog {
                 .addComponent(jLabelDescricao)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextFieldDescricao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 97, Short.MAX_VALUE)
                 .addGroup(jPanelDdosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonSave, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButtonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonSave, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(42, 42, 42))
         );
 
         getContentPane().add(jPanelDdos);
         jPanelDdos.setBounds(10, 100, 650, 450);
 
-        setSize(new java.awt.Dimension(687, 561));
+        setSize(new java.awt.Dimension(687, 570));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
