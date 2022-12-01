@@ -210,7 +210,7 @@ public class HomeFrame extends javax.swing.JFrame {
         jButton1.setText("Sair");
         jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(jButton1);
-        jButton1.setBounds(690, 90, 23, 20);
+        jButton1.setBounds(690, 90, 60, 20);
 
         setSize(new java.awt.Dimension(787, 530));
         setLocationRelativeTo(null);

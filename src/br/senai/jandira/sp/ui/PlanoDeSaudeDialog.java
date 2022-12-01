@@ -134,7 +134,7 @@ public class PlanoDeSaudeDialog extends javax.swing.JDialog {
             }
         });
 
-        jTextFieldCodigo.setEditable(false);
+        jTextFieldCodigo.setBackground(new java.awt.Color(255, 255, 255));
         jTextFieldCodigo.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jTextFieldCodigo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

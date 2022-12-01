@@ -1,5 +1,6 @@
 package br.senai.jandira.sp.dao;
 
+import static br.senai.jandira.sp.dao.EspecialidadeDAO.getEspecialidades;
 import br.senai.jandira.sp.model.Especialidade;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -161,10 +162,11 @@ public class EspecialidadeDAO {
         }
         return new DefaultTableModel(dados, titulo);
     }
-    public static DefaultListModel<Especialidade> getListaDeEspecialidades() {
-        DefaultListModel<Especialidade> listaDeEspecialidades = new DefaultListModel<>();
-        for (Especialidade i : getEspecialidades()) {
-            listaDeEspecialidades.addElement(i);
+    public static DefaultListModel<String> getListaDeEspecialidades() {
+        DefaultListModel<String> listaDeEspecialidades = new DefaultListModel<>();
+        
+        for (Especialidade especialidade :especialidades) {
+            listaDeEspecialidades.addElement(especialidade.getCodigo() + " - " + especialidade.getNome());
             listaDeEspecialidades.toString();
         }
         return listaDeEspecialidades;
